@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(https://cdn.shopify.com/s/files/1/2656/8500/products/ohpopsi-murals-standard-3-06m-x-2-48m-white-library-bookcase-wall-mural-3207426900011.jpg?v=1522256378);
+    background-size: cover;
+    background-position: center;
+}
+
+.navigatie {
+    width: 100%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigatie ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navigatie ul li a {
+    text-decoration: none;
+    color: rgba(33, 248, 8, 0.64);
+    text-transform: uppercase;
+}
+
+.navigatie ul li::after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navigatie ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+.button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+body {
+    background: url("https://cdn.shopify.com/s/files/1/2656/8500/products/ohpopsi-murals-standard-3-06m-x-2-48m-white-library-bookcase-wall-mural-3207426900011.jpg?v=1522256378") no-repeat;
+    background-size: cover;
+}
+
+.loginform {
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: #fff;
+}
+
+.loginform h1 {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 40px 0;
+}
+
+.loginform p {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.loginform input {
+    font-size: 16px;
+    width: 100%;
+    padding: 15px 10px;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+}
+
+.loginform button {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.w3-quarter {
+    color: #fff;
+}
+
+.boektoevoegen {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
