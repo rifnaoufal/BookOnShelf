@@ -9,7 +9,7 @@
 
     <form action="php/login.php" method="post">
         <p>username of Email</p>
-        <input type="text" name="username" placeholder="username of Email" required/>
+        <input type="text" name="username" placeholder="username" required/>
         <p>wachtwoord</p>
         <input type="text" name="password" placeholder="Wachtwoord" required/>
         <button type="submit">Login</button>
