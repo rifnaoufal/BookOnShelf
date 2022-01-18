@@ -8,7 +8,7 @@
     ?>
 
     <form action="php/login.php" method="post">
-        <p>username of Email</p>
+        <p>username</p>
         <input type="text" name="username" placeholder="username" required/>
         <p>wachtwoord</p>
         <input type="text" name="password" placeholder="Wachtwoord" required/>
