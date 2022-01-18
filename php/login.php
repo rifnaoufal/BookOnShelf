@@ -1,15 +1,23 @@
 <?php
 session_start();
 
-if ($_POST['user'] == 'admin' && $_POST['psw'] == 'admin') {
+include '../private/connection.php';
+
+$sql = 'SELECT password FROM users WHERE email = :email';
+$sth = $conn->prepare($sql);
+$sth->bindParam(':username', $_POST['user']);
+$sth->execute();
+
+if ($rsUser = $sth->fetch(PDO::FETCH_ASSOC)) {
+if ($_POST['psw'] == $rsUser['password']) {
     $_SESSION['ingelogd'] = true;
     header('location: ../index.php?page=dashboard');
-}
-else if
-    ($_POST['user'] == 'klant' && $_POST['psw'] == 'klant') {
-    $_SESSION['ingelogd1'] = true;
-    header('location: ../index.php?page=homepage');
-}else{
+
+}else {
+    $_SESSION['melding'] = 'Combinatie gebruikersnaam en wacthwoord onjuist.';
+    header('location: ../index.php?page=Login');
+   }
+} else {
     $_SESSION['melding'] = 'Combinatie gebruikersnaam en wacthwoord onjuist.';
     header('location: ../index.php?page=Login');
 }
