@@ -8,10 +8,10 @@
     ?>
 
     <form action="php/login.php" method="post">
-        <p>Email</p>
-        <input type="text" name="user" placeholder="Email" required/>
+        <p>username of Email</p>
+        <input type="text" name="username" placeholder="username of Email" required/>
         <p>wachtwoord</p>
-        <input type="text" name="psw" placeholder="wachtwoord" required/>
+        <input type="text" name="password" placeholder="Wachtwoord" required/>
         <button type="submit">Login</button>
     </form>
 </div>

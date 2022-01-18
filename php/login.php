@@ -3,23 +3,33 @@ session_start();
 
 include '../private/connection.php';
 
-$sql = 'SELECT password FROM users WHERE email = :email';
-$sth = $conn->prepare($sql);
-$sth->bindParam(':email', $_POST['user']);
-$sth->execute();
+$username = $_POST['username'];
+$password = $_POST['password'];
 
-if ($rsUser = $sth->fetch(PDO::FETCH_ASSOC)) {
-if ($_POST['psw'] == $rsUser['password']) {
-    $_SESSION['ingelogd'] = true;
-    header('location: ../index.php?page=dashboard');
+$sql = 'SELECT role FROM users WHERE username= :username AND password = :password';
 
-}else {
-    $_SESSION['melding'] = 'Combinatie gebruikersnaam en wacthwoord onjuist.';
-    header('location: ../index.php?page=Login');
-   }
-} else {
-    $_SESSION['melding'] = 'Combinatie gebruikersnaam en wacthwoord onjuist.';
-    header('location: ../index.php?page=Login');
+$query = $conn->prepare($sql);
+$query->bindParam(':username', $username);
+$query->bindParam(':password', $password);
+$query->execute();
+
+
+if ($query->rowCount() == 1 ) {
+    $result = $query->fetch(PDO::FETCH_ASSOC);
+    if ($result['role'] == "admin") {
+        $_SESSION['ingelogd'] = true;
+        header('location: ../index.php?page=dashboard');
+    } elseif ($result['role'] == "") {
+        $_SESSION['ingelogd1'] = true;
+        header('location: ../index.php?page=Overzicht');
+    }
+}else{
+
+    $_SESSION['melding'] = 'Combinatie gebruikersnaam en Wachtwoord onjuist.';
+    header('location: ../index.php?page=login');
 }
+
+
+
 
 ?>
