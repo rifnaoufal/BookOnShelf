@@ -8,8 +8,8 @@
     ?>
 
     <form action="php/login.php" method="post">
-        <p>Gebruikersnaam</p>
-        <input type="text" name="user" placeholder="Gebruikersnaam" required/>
+        <p>Email</p>
+        <input type="text" name="user" placeholder="Email" required/>
         <p>wachtwoord</p>
         <input type="text" name="psw" placeholder="wachtwoord" required/>
         <button type="submit">Login</button>

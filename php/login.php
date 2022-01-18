@@ -5,7 +5,7 @@ include '../private/connection.php';
 
 $sql = 'SELECT password FROM users WHERE email = :email';
 $sth = $conn->prepare($sql);
-$sth->bindParam(':username', $_POST['user']);
+$sth->bindParam(':email', $_POST['user']);
 $sth->execute();
 
 if ($rsUser = $sth->fetch(PDO::FETCH_ASSOC)) {
