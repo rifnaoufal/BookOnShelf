@@ -4,7 +4,6 @@ $menuItems = [
     ['Login', 'LOGIN'],
     ['register', 'REGISTER'],
     ['Overzicht', 'OVERZICHT'],
-    ['OverzichtADMIN', 'ADMIN'],
     ['Geleend', 'GELEEND'],
     ['Reserveerd', 'GERESERVEERD'],
 ];
@@ -19,6 +18,7 @@ $menuItems = [
 
     if (isset($_SESSION['ingelogd'])) {
         echo '<li><a href="php/logout.php">uitloggen</a></li>';
+        echo '<li><a href="index.php?page=OverzichtADMIN">ADMIN</a></li>';
     }
     ?>
     </ul>
