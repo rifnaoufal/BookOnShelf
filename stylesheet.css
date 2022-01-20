@@ -30,7 +30,7 @@
 
 .navigatie ul li a {
     text-decoration: none;
-    color: rgba(33, 248, 8, 0.64);
+    color: #ffffff;
     text-transform: uppercase;
 }
 
@@ -69,7 +69,7 @@
     line-height: 25px;
 }
 
-.button {
+button {
     width: 200px;
     padding: 15px 0;
     text-align: center;
