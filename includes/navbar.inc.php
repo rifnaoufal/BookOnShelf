@@ -1,12 +1,12 @@
 <?php
 $menuItems = [
-    ['homepage', 'Home'],
-    ['Login', 'login'],
-    ['register', 'Register'],
-    ['Overzicht', 'Overzicht'],
-    ['OverzichtADMIN', '[ADMIN]'],
-    ['Geleend', 'Geleend'],
-    ['Reserveerd', 'Reserveerd'],
+    ['homepage', 'HOME'],
+    ['Login', 'LOGIN'],
+    ['register', 'REGISTER'],
+    ['Overzicht', 'OVERZICHT'],
+    ['OverzichtADMIN', 'ADMIN'],
+    ['Geleend', 'GELEEND'],
+    ['Reserveerd', 'GERESERVEERD'],
 ];
 ?>
 
