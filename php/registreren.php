@@ -1,5 +1,5 @@
 <?php
-include '../private/connection.php';
+include '../private/connection-example.php';
 
 $voornaam = $_POST['voornaam'];
 $achternaam = $_POST['achternaam'];

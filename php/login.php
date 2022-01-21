@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include '../private/connection.php';
+include '../private/connection-example.php';
 
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -19,7 +19,7 @@ if ($query->rowCount() == 1 ) {
     if ($result['role'] == "admin") {
         $_SESSION['ingelogd'] = true;
         header('location: ../index.php?page=dashboard');
-    } elseif ($result['role'] == "") {
+    } elseif ($result['role'] == "klant") {
         $_SESSION['ingelogd1'] = true;
         header('location: ../index.php?page=Overzicht');
     }
@@ -28,8 +28,3 @@ if ($query->rowCount() == 1 ) {
     $_SESSION['melding'] = 'Combinatie gebruikersnaam en Wachtwoord onjuist.';
     header('location: ../index.php?page=login');
 }
-
-
-
-
-?>
