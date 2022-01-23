@@ -2,27 +2,25 @@
 
 include '../private/connection.php';
 
-$voornaam = $_POST['voornaam'];
-$achternaam = $_POST['achternaam'];
-$woonplaats = $_POST['woonplaats'];
-$straat = $_POST['straat'];
-$huisnummer = $_POST['huisnummer'];
-$postcode = $_POST['postcode'];
-$username = $_POST['username'];
-$password = $_POST['password'];
+$Naam = $_POST['Naam'];
+$Genre = $_POST['Genre'];
+$ISBN = $_POST['ISBN'];
+$schrijver = $_POST['schrijver'];
+$Taal = $_POST['Taal'];
+$paginas = $_POST['paginas'];
+$exemplaren = $_POST['exemplaren'];
 
 
-$stmt = $conn->prepare("INSERT INTO users (voornaam, achternaam,woonplaats,straat,huisnummer,postcode,username,password) values(:voornaam, :achternaam, :woonplaats, :straat, :huisnummer,:postcode,:username,:password)");
+$stmt = $conn->prepare("INSERT INTO books (Naam, Genre,ISBN,schrijver,Taal,paginas,exemplaren) values(:Naam, :Genre, :ISBN, :schrijver, :Taak, :paginas,:exemplaren)");
 
-$stmt->bindParam(':voornaam', $voornaam);
-$stmt->bindParam(':achternaam', $achternaam);
-$stmt->bindParam(':woonplaats', $woonplaats);
-$stmt->bindParam(':straat', $straat);
-$stmt->bindParam(':huisnummer', $huisnummer);
-$stmt->bindParam(':postcode', $postcode);
-$stmt->bindParam(':username', $username);
-$stmt->bindParam(':password', $password);
+$stmt->bindParam(':Naam', $Naam);
+$stmt->bindParam(':Genre', $Genre);
+$stmt->bindParam(':ISBN', $ISBN);
+$stmt->bindParam(':schrijver', $schrijver);
+$stmt->bindParam(':Taal', $Taal);
+$stmt->bindParam(':paginas', $paginas);
+$stmt->bindParam(':exemplaren', $exemplaren);
 
 
 $stmt->execute();
-header('location: ../index.php?page=Login');
+header('location: ../index.php?page=OverzichtADMIN');
