@@ -5,6 +5,7 @@ include '../private/connection.php';
 
 if (isset($_POST['update']));
 {
+    $Id = $_POST['Id'];
     $naam = $_POST['naam'];
     $Genre = $_POST['Genre'];
     $ISBN = $_POST['ISBN'];
@@ -14,7 +15,8 @@ if (isset($_POST['update']));
     $exemplaren = $_POST['exemplaren'];
 
 
-    $stmt = $conn->prepare("UPDATE books SET `naam` = :naam, `Genre` = :Genre, `ISBN` = :ISBN, `schrijver` = :schrijver, `Taal` = :Taal, `paginas` = :paginas, `exemplaren` = :exemplaren  WHERE `ID` = :ID");
+    $stmt = $conn->prepare("UPDATE books SET `naam` = :naam, `Genre` = :Genre, `ISBN` = :ISBN, `schrijver` = :schrijver, `Taal` = :Taal, `paginas` = :paginas, `exemplaren` = :exemplaren  WHERE `Id` = :Id");
+    $stmt->bindParam(':Id', $Id, PDO::PARAM_STR);
     $stmt->bindParam(':naam', $naam, PDO::PARAM_STR);
     $stmt->bindParam(':Genre', $Genre, PDO::PARAM_STR);
     $stmt->bindParam(':ISBN', $ISBN, PDO::PARAM_STR);
@@ -26,4 +28,3 @@ if (isset($_POST['update']));
 }
 
 header('location: ../index.php?page=OverzichtADMIN');
-php

@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="stylesheet.css">
 <div class="container w3-row-padding w3-padding-16 w3-center">
     <?php
-        include 'private/connection-example.php';
-        $sql = "SELECT id, naam, Genre, ISBN, schrijver, Taal, paginas, exemplaren, foto FROM books";
+        include 'private/connection.php';
+        $sql = "SELECT Id, naam, Genre, ISBN, schrijver, Taal, paginas, exemplaren, foto FROM books";
         $sth = $conn->prepare($sql);
         $sth->execute();
         while ($info = $sth->fetch(PDO::FETCH_ASSOC)) { ?>
@@ -15,7 +15,7 @@
             <h3><?= $info['Taal']  ?></h3>
             <h3><?= $info['paginas']  ?></h3>
             <h3><?= $info['exemplaren']  ?></h3>
-            <button type="button">Bewerken</button>
+            <td><button onclick=" if(confirm('Weet u zeker dat u dit boek wilt verwijderen?'))window.location.href='php/verwijderen.php?id=<?= $info["Id"] ?>'">Delete</button></td>
         </div>
     <?php
         }

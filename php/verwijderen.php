@@ -2,11 +2,10 @@
 include '../private/connection.php';
 
 
-$ID = $_POST['ID'];
+$Id = $_GET['id'];
 
-
-$stmt = $conn->prepare("DELETE FROM books WHERE ID = :ID");
-$stmt->bindParam(':ID', $ID, PDO::PARAM_STR);
+$stmt = $conn->prepare("DELETE FROM books WHERE Id = :Id");
+$stmt->bindParam(':Id', $Id, PDO::PARAM_STR);
 $stmt->execute();
 
 header('location: ../index.php?page=OverzichtADMIN');

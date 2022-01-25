@@ -1,11 +1,11 @@
 <?php
-include '../private/connection.php';
+include 'private/connection.php';
 
 
 $sql = "SELECT * FROM books";
 $result = $conn->query($sql);
 
-echo'<table>';
+echo'<table style="color: aliceblue">';
 echo '<tr>';
 echo "<th>Id</th>";
 echo "<th>naam</th>";
