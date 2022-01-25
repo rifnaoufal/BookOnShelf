@@ -1,6 +1,6 @@
 <?php
 
-include '../private/connection-example.php';
+include '../private/connection.php';
 
 $naam = $_POST['naam'];
 $Genre = $_POST['Genre'];

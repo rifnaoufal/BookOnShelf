@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include '../private/connection-example.php';
+include '../private/connection.php';
 
 $username = $_POST['username'];
 $password = $_POST['password'];

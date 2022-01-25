@@ -1,5 +1,5 @@
 <?php
-include '../private/connection-example.php';
+include '../private/connection.php';
 
 
 
