@@ -13,7 +13,8 @@ if (isset($_POST['update']));
     $paginas = $_POST['paginas'];
     $exemplaren = $_POST['exemplaren'];
 
-    $stmt = $conn->prepare("UPDATE books SET `Naam` = :Naam, `Genre` = :Genre, `ISBN` = :ISBN, `schrijver` = :schrijver, `Taal` = :Taal, `paginas` = :paginas, `exemplaren` = :exemplaren  WHERE `ID` = :ID");
+
+    $stmt = $conn->prepare("UPDATE books SET `naam` = :naam, `Genre` = :Genre, `ISBN` = :ISBN, `schrijver` = :schrijver, `Taal` = :Taal, `paginas` = :paginas, `exemplaren` = :exemplaren  WHERE `ID` = :ID");
     $stmt->bindParam(':naam', $naam, PDO::PARAM_STR);
     $stmt->bindParam(':Genre', $Genre, PDO::PARAM_STR);
     $stmt->bindParam(':ISBN', $ISBN, PDO::PARAM_STR);

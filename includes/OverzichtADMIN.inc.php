@@ -20,8 +20,4 @@
     <?php
         }
     ?>
-<!--    <button type="boektoevoegen" style="height: 10%">BOEK TOEVOEGEN</button>-->
-    <form method="POST" action="../index.php?page=boekentoevoegen">
-        <input type="submit"/>
-    </form>
 </div>
