@@ -1,4 +1,4 @@
-<div class="Boek toevoegen">
+<div class="loginform">
     <h1>Boek toevoegen</h1>
     <form action="../php/toevoegen.php" method="post">
         <input type="text" name="naam" placeholder="naam">

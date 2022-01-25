@@ -18,6 +18,7 @@ $menuItems = [
 
     if (isset($_SESSION['ingelogd'])) {
         echo '<li><a href="index.php?page=OverzichtADMIN">ADMIN</a></li>';
+        echo '<li><a href="index.php?page=boekentoevoegen">boekentoevoegen</a></li>';
         echo '<li><a href="php/logout.php">uitloggen</a></li>';
     }
     ?>
