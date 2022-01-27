@@ -8,13 +8,29 @@
     while ($info = $sth->fetch(PDO::FETCH_ASSOC)) { ?>
         <div class="w3-quarter">
             <img src="<?=$info['foto'] ?>"style="width:40%">
-            <h3><?= $info['naam']  ?></h3>
-            <h3><?= $info['Genre']  ?></h3>
-            <h3><?= $info['ISBN']  ?></h3>
-            <h3><?= $info['schrijver']  ?></h3>
-            <h3><?= $info['Taal']  ?></h3>
-            <h3><?= $info['paginas']  ?></h3>
-            <h3><?= $info['exemplaren']  ?></h3>
+            <h2>Naam</h2>
+            <h4><?= $info['naam']  ?></h4>
+
+            <h2>Genre</h2>
+            <h4><?= $info['Genre']  ?></h4>
+
+            <h2>ISBN</h2>
+            <h4><?= $info['ISBN']  ?></h4>
+
+            <h2>Schrijver</h2>
+            <h4><?= $info['schrijver']  ?></h4>
+
+            <h2>Taal</h2>
+            <h4><?= $info['Taal']  ?></h4>
+
+            <h2>paginas</h2>
+            <h4><?= $info['paginas']  ?></h4>
+
+            <h2>exemplaren</h2>
+            <h4><?= $info['exemplaren']  ?></h4>
+            
+            <button>Reserveren</button>
+            <button>terug brengen</button>
         </div>
         <?php
     }

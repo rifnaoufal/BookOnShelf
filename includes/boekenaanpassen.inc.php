@@ -46,6 +46,6 @@ $dbh = null;
         <input type="text" placeholder="Taal" name="Taal" required>
         <input type="text" placeholder="paginas" name="paginas" required>
         <input type="text" placeholder="exemplaren" name="exemplaren" required>
-        <button id="add-button" name="update" class="button">Update</button>
+        <button id="add-button" name="update" class="button">update</button>
     </form>
 </div>

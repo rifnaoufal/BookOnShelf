@@ -8,13 +8,26 @@
         while ($info = $sth->fetch(PDO::FETCH_ASSOC)) { ?>
         <div class="w3-quarter">
             <img src="<?=$info['foto'] ?>"style="width:40%">
-            <h3><?= $info['naam']  ?></h3>
-            <h3><?= $info['Genre']  ?></h3>
-            <h3><?= $info['ISBN']  ?></h3>
-            <h3><?= $info['schrijver']  ?></h3>
-            <h3><?= $info['Taal']  ?></h3>
-            <h3><?= $info['paginas']  ?></h3>
-            <h3><?= $info['exemplaren']  ?></h3>
+            <h2>Naam</h2>
+            <h4><?= $info['naam']  ?></h4>
+
+            <h2>Genre</h2>
+            <h4><?= $info['Genre']  ?></h4>
+
+            <h2>ISBN</h2>
+            <h4><?= $info['ISBN']  ?></h4>
+
+            <h2>Schrijver</h2>
+            <h4><?= $info['schrijver']  ?></h4>
+
+            <h2>Taal</h2>
+            <h4><?= $info['Taal']  ?></h4>
+
+            <h2>Paginas</h2>
+            <h4><?= $info['paginas']  ?></h4>
+
+            <h4>Exemplaren</h4>
+            <h2><?= $info['exemplaren']  ?></h2>
             <td><button onclick=" if(confirm('Weet u zeker dat u dit boek wilt verwijderen?'))window.location.href='php/verwijderen.php?id=<?= $info["Id"] ?>'">Delete</button></td>
         </div>
     <?php
