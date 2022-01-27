@@ -22,6 +22,10 @@ $menuItems = [
         echo '<li><a href="index.php?page=boekenaanpassen">boekenaanpassen</a></li>';
         echo '<li><a href="php/logout.php">uitloggen</a></li>';
     }
+
+    elseif (isset($_SESSION['ingelogd1'])) {
+    echo '<li><a href="php/logout.php">uitloggen</a></li>';
+    }
     ?>
     </ul>
 </div>

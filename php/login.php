@@ -21,7 +21,7 @@ if ($query->rowCount() == 1 ) {
         header('location: ../index.php?page=dashboard');
     } elseif ($result['role'] == "klant") {
         $_SESSION['ingelogd1'] = true;
-        header('location: ../index.php?page=Overzicht');
+        header('location: ../index.php?page=welkom');
     }
 }else{
 
