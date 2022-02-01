@@ -32,7 +32,7 @@
             <button>Reserveren</button>
             <button>terug brengen</button>
             <form method="POST" action="php/terugbrengen.php">
-                <input type="hidden" name="bookid" value="<?= $row['BookID'] ?>">
+                <input type="hidden" name="bookid" value="<?= $row['book_id'] ?>">
                 <button type="submit" name="brengterug" class="btn-customer-borrow">Breng terug</button>
             </form>
         </div>
