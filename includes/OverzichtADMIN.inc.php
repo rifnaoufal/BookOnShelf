@@ -26,8 +26,8 @@
             <h2>Paginas</h2>
             <h4><?= $info['paginas']  ?></h4>
 
-            <h4>Exemplaren</h4>
-            <h2><?= $info['exemplaren']  ?></h2>
+            <h2>Exemplaren</h2>
+            <h4><?= $info['exemplaren']  ?></h4>
             <td><button onclick=" if(confirm('Weet u zeker dat u dit boek wilt verwijderen?'))window.location.href='php/verwijderen.php?id=<?= $info["Id"] ?>'">Delete</button></td>
         </div>
     <?php

@@ -5,6 +5,5 @@
              alt="Pasta and Wine" style="width:40%">
         <h3>Harry Potter</h3>
         <p>And The Half-Blood Prince</p>
-        <button type="button">Verlengen</button>
     </div>
 </div>

@@ -5,6 +5,5 @@
              alt="Sandwich" style="width:40%">
         <h3>Lord Of The Rings</h3>
         <p>The Fellowship Of The Ring</p>
-        <button type="button">Reservering annuleren</button>
     </div>
 </div>
