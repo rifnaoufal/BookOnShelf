@@ -28,8 +28,12 @@
 
             <h2>exemplaren</h2>
             <h4><?= $info['exemplaren']  ?></h4>
-            
-            <button>Reserveren</button>
+            <td>
+            <form  method="POST" action="php/gereserveerd.php">
+                <input type="hidden" name="bookid" value="<?= $info["Id"] ?>">
+                <button type="submit" name="Leen" class="btn-customer-rent">Reserveer</button>
+            </form>
+            <td>
             <td>
                 <form  method="POST" action="php/Lenen.php">
                     <input type="hidden" name="bookid" value="<?= $info["Id"] ?>">

@@ -5,7 +5,7 @@ $menuItems = [
     ['register', 'REGISTER'],
     ['Overzicht', 'OVERZICHT'],
     ['lenen', 'GELEEND'],
-    ['Reserveerd', 'GERESERVEERD'],
+    ['gereserveerd', 'GERESERVEERD'],
 ];
 ?>
 
