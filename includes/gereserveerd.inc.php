@@ -10,7 +10,7 @@ WHERE reserveren.user_id = $regid";
 
 $result = $conn->query($sql);
 echo '<h2 style="color: white">Gereserveerde boeken</h2>';
-echo'<table style="color: white">';
+echo '<table style="color: white">';
 echo '<tr>';
 
 echo "<th>naam</th>";
@@ -23,7 +23,7 @@ echo "<th>exemplaren</th>";
 
 echo '</tr>';
 
-if ($result->rowCount() > 0){
+if ($result->rowCount() > 0) {
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) { ?>
         <tr>
             <td><?= $row["naam"] ?></td>
@@ -36,12 +36,12 @@ if ($result->rowCount() > 0){
             <td>
                 <form method="POST" action="../php/reserveringann.php">
                     <input type="hidden" name="bookid" value="<?= $row['Id'] ?>">
-                    <button type="submit" name="brengterug" class="btn-customer-borrow">terugbrengen</button>
+                    <button type="submit" name="brengterug" class="btn-customer-borrow">cancel reservering</button>
                 </form>
             </td>
         </tr>
         <?php
     }
 } else {
-    echo '<td> "0 results"</td>';
-}?>
+    echo '<td> "Geen Resultaten."</td>';
+} ?>

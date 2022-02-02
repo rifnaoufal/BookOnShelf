@@ -45,6 +45,6 @@ if ($result->rowCount() > 0){
         <?php
     }
 } else {
-    echo '<td> "0 results"</td>';
+    echo '<td> "Geen Resultaten."</td>';
 }?>
 </table>

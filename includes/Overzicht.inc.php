@@ -29,17 +29,19 @@
             <h2>exemplaren</h2>
             <h4><?= $info['exemplaren']  ?></h4>
             <td>
-            <form  method="POST" action="php/gereserveerd.php">
-                <input type="hidden" name="bookid" value="<?= $info["Id"] ?>">
-                <button type="submit" name="Leen" class="btn-customer-rent">Reserveer</button>
-            </form>
+                <?php if($info["exemplaren"] == 0){ ?>
+                    <form  method="POST" action="php/gereserveerd.php">
+                        <input type="hidden" name="bookid" value="<?= $info["Id"] ?>">
+                        <button type="submit" name="Leen" class="btn-customer-rent">Reserveer</button>
+                    </form>
             <td>
-            <td>
+                <?php } else {?>
                 <form  method="POST" action="php/Lenen.php">
                     <input type="hidden" name="bookid" value="<?= $info["Id"] ?>">
                     <button type="submit" name="Leen" class="btn-customer-borrow">Leen</button>
                 </form>
             </td>
+            <?php } ?>
         </div>
         <?php
     }
