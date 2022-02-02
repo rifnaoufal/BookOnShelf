@@ -37,7 +37,7 @@ if ($result->rowCount() > 0){
             <td>
                 <form method="POST" action="../php/terugbrengen.php">
                     <input type="hidden" name="bookid" value="<?= $row['BookID'] ?>">
-                    <button type="submit" name="brengterug" class="btn-customer-borrow">Breng terug</button>
+                    <button type="submit" name="brengterug" class="btn-customer-borrow">terugbrengen</button>
                 </form>
             </td>
         </tr>

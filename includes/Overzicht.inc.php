@@ -30,11 +30,12 @@
             <h4><?= $info['exemplaren']  ?></h4>
             
             <button>Reserveren</button>
-            <button>terug brengen</button>
-            <form method="POST" action="php/terugbrengen.php">
-                <input type="hidden" name="bookid" value="<?= $row['book_id'] ?>">
-                <button type="submit" name="brengterug" class="btn-customer-borrow">Breng terug</button>
-            </form>
+            <td>
+                <form  method="POST" action="php/Lenen.php">
+                    <input type="hidden" name="bookid" value="<?= $row["BookID"] ?>">
+                    <button type="submit" name="Leen" class="btn-customer-borrow">Leen</button>
+                </form>
+            </td>
         </div>
         <?php
     }

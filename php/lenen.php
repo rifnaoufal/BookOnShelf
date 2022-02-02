@@ -2,7 +2,7 @@
 session_start();
 include '../Private/connection.php';
 if(isset($_POST['Leen'])){
-    $bookid = $_POST['bookid'];
+    $bookid = $_POST['book_id'];
     $userid = $_SESSION['Role'];
 
      $sql = "SELECT * FROM borrowed ";
@@ -19,7 +19,6 @@ if(isset($_POST['Leen'])){
         $stmt->bindParam(':usersid' , $userid);
         $stmt->bindParam(':booksid' , $bookid);
         $stmt->execute();
-
 
         $stmt = $conn->prepare("UPDATE books SET exemplaren = exemplaren - 1 where Id = :bookid ");
         $stmt->bindParam(':bookid' , $bookid);
