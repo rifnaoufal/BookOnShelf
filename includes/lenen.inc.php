@@ -1,12 +1,12 @@
 <?php
-include '../Private/connection.php';
-$registratieid = $_SESSION['role'];
+include 'Private/connection.php';
+$regid = $_SESSION['URID'];
 
 $sql = "SELECT DISTINCT borrowed.book_id, borrowed.user_id, books.naam, books.Taal,  books.Genre, books.ISBN, books.Schrijver, books.Taal , books.paginas, books.Exemplaren
 FROM borrowed
 INNER JOIN books ON borrowed.book_id = books.Id
 INNER JOIN users ON borrowed.user_id = users.role
-WHERE borrowed.user_id = $registratieid";
+WHERE borrowed.user_id = $regid";
 
 $result = $conn->query($sql);
 echo '<h2>Mijn geleende boeken</h2>';

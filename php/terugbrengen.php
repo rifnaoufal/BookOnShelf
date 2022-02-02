@@ -3,7 +3,7 @@ session_start();
 include '../Private/connection.php';
 if (isset($_POST['brengterug'])) {
     $bookid = $_POST['book_id'];
-    $userid = $_SESSION['role'];
+    $userid = $_SESSION['URID'];
 
     $stmt = $conn->prepare("DELETE FROM borrowed where user_id = :usersid AND book_id = :booksid ");
     $stmt->bindParam(':usersid', $userid);
@@ -16,5 +16,5 @@ if (isset($_POST['brengterug'])) {
     $stmt->execute();
 
 
-    header('location: ../index.php?page=Geleend');
+    header('location: ../index.php?page=lenen');
 }

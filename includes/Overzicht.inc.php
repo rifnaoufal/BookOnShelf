@@ -32,7 +32,7 @@
             <button>Reserveren</button>
             <td>
                 <form  method="POST" action="php/Lenen.php">
-                    <input type="hidden" name="bookid" value="<?= $row["BookID"] ?>">
+                    <input type="hidden" name="bookid" value="<?= $info["Id"] ?>">
                     <button type="submit" name="Leen" class="btn-customer-borrow">Leen</button>
                 </form>
             </td>
