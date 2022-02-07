@@ -11,7 +11,7 @@ if (isset($_POST['brengterug'])) {
     $stmt->bindParam(':booksid', $bookid);
     $stmt->execute();
 
-    $stmt = $conn->prepare("UPDATE books SET exemplaren = exemplaren + 1 where Id = :bookid ");
+    $stmt = $conn->prepare("UPDATE books SET exemplaren = exemplaren where Id = :bookid ");
     $stmt->bindParam(':bookid', $bookid);
     $stmt->execute();
 

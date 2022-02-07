@@ -11,7 +11,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 
-$stmt = $conn->prepare("INSERT INTO users (voornaam, achternaam,woonplaats,straat,huisnummer,postcode,username,password) values(:voornaam, :achternaam, :woonplaats, :straat, :huisnummer,:postcode,:username,:password)");
+$stmt = $conn->prepare("INSERT INTO users (voornaam,achternaam,woonplaats,straat,huisnummer,postcode,username,password) values(:voornaam, :achternaam, :woonplaats, :straat, :huisnummer,:postcode,:username,:password)");
 
 $stmt->bindParam(':voornaam' , $voornaam);
 $stmt->bindParam(':achternaam' , $achternaam);
