@@ -1,6 +1,6 @@
 <div class="loginform">
     <h1>Register</h1>
-    <form action="../php/registreren.php" method="post">
+    <form action="../php/register.php" method="post">
         <input type="text" name="voornaam" placeholder="voornaam">
         <input type="text" name="tussenvoegsel" placeholder="tussenvoegsel">
         <input type="text" name="achternaam" placeholder="achternaam">

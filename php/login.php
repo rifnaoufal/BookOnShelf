@@ -24,7 +24,9 @@ if ($query->rowCount() == 1 ) {
         $_SESSION['ingelogd1'] = true;
         $_SESSION['URID'] = $result['URID'];
         header('location: ../index.php?page=welkom');
-    }
+    } else {        $_SESSION['ingelogd1'] = true;
+        $_SESSION['URID'] = $result['URID'];
+        header('location: ../index.php?page=welkom');}
 }else{
 
     $_SESSION['melding'] = 'Combinatie gebruikersnaam en Wachtwoord onjuist.';
