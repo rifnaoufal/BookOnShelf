@@ -5,7 +5,7 @@ include 'private/connection.php';
 $sql = "SELECT * FROM books";
 $result = $conn->query($sql);
 
-echo'<table style="color: aliceblue">';
+echo'<table style="color: aliceblue; margin-bottom: 28%">';
 echo '<tr>';
 echo "<th>Id</th>";
 echo "<th>naam</th>";
@@ -19,7 +19,7 @@ echo '</tr>';
 
 if ($result->rowCount() > 0){
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-        echo '<tr>';
+        echo '<tr">';
         echo '<td>'. $row["Id"];'</td>';
         echo '<td>'. $row["naam"];'</td>';
         echo '<td>'. $row["Genre"];'</td>';

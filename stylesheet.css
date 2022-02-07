@@ -150,3 +150,7 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+
+input {
+    margin-bottom: 10px;
+}

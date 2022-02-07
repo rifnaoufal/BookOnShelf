@@ -2,7 +2,7 @@
     <h1>Register</h1>
     <form action="../php/register.php" method="post">
         <input type="text" name="voornaam" placeholder="voornaam" required>
-        <input type="text" name="tussenvoegsel" placeholder="tussenvoegsel" required>
+        <input type="text" name="tussenvoegsel" placeholder="tussenvoegsel">
         <input type="text" name="achternaam" placeholder="achternaam" required>
         <input type="text" name="woonplaats" placeholder="woonplaats" required>
         <input type="text" name="straat" placeholder="straat" required>
