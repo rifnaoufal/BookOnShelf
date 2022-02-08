@@ -11,6 +11,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 $role = $_POST['role'];
 
+$password = password_hash($password, PASSWORD_DEFAULT);
 
 $stmt = $conn->prepare("INSERT INTO users (voornaam,achternaam,woonplaats,straat,huisnummer,postcode,username,password,role) values(:voornaam, :achternaam, :woonplaats, :straat, :huisnummer,:postcode,:username,:password,:role)");
 

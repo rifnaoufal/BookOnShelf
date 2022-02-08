@@ -22,8 +22,8 @@ $menuItems = [
     }
 
     elseif (isset($_SESSION['ingelogd1'])) {
-        echo '<li><a href="index.php?page=lenen">lenen</a></li>';
-        echo '<li><a href="index.php?page=gereserveerd">reserveren</a></li>';
+        echo '<li><a href="index.php?page=lenen">geleend</a></li>';
+        echo '<li><a href="index.php?page=gereserveerd">gereserveerd</a></li>';
         echo '<li><a href="php/logout.php">uitloggen</a></li>';
     }
     ?>
