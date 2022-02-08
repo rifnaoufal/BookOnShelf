@@ -11,5 +11,11 @@
         <input type="text" name="username" placeholder="username" required>
         <input type="password" name="password" placeholder="password" required>
         <button type="submit">Register</button>
+        <form>
+            <label for="role">kies je role:</label>
+            <select id="role" name="role">
+                <option value="klant">klant</option>
+            </select>
+        </form>
     </form>
 </div>
