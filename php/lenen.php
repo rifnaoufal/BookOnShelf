@@ -8,17 +8,17 @@ if(isset($_POST['Leen'])){
     echo $bookid . $userid;
 
     $stmt = $conn->prepare("INSERT INTO borrowed (user_id, book_id)
-                    VALUES(:usersid, :booksid)");
+                    VALUES(:usersid, :Id)");
 
     $stmt->bindParam(':usersid' , $userid);
-    $stmt->bindParam(':booksid' , $bookid);
+    $stmt->bindParam(':Id' , $bookid);
     $stmt->execute();
 
-    $stmt = $conn->prepare("UPDATE books SET exemplaren = exemplaren - 1 where Id = :bookid ");
-    $stmt->bindParam(':bookid' , $bookid);
+    $stmt = $conn->prepare("UPDATE books SET exemplaren = exemplaren - 1 where Id = :Id ");
+    $stmt->bindParam(':Id' , $bookid);
     $stmt->execute();
     header('location: ../index.php?page=lenen');
-    }
-    else{
-        header('location: ../index.php?page=Overzicht');
+}
+else{
+    header('location: ../index.php?page=Overzicht');
 }

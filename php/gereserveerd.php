@@ -5,18 +5,17 @@ include '../Private/connection.php';
 $bookid = $_POST['bookid'];
 $userid = $_SESSION['URID'];
 
-$sql='SELECT * FROM reserveren where book_id = :bookid and user_id = :userid';
+$sql='SELECT * FROM reserveren where book_id = :Id and user_id = :userid';
 $result = $conn->prepare($sql);
 $result->bindParam(':userid' , $userid);
-$result->bindParam(':bookid' , $bookid);
+$result->bindParam(':Id' , $bookid);
 $result->execute();
 
 if ($result->rowCount() == 0) {
     $stmt = $conn->prepare("INSERT INTO reserveren (user_id, book_id)
-                        VALUES(:usersid, :booksid)");
-
+                        VALUES(:usersid, :Id)");
     $stmt->bindParam(':usersid', $userid);
-    $stmt->bindParam(':booksid', $bookid);
+    $stmt->bindParam(':Id', $bookid);
 
     $stmt->execute();
 
